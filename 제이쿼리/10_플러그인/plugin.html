@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slick플러그인</title>
+    <link rel="stylesheet" href="../slick/css/slick.css">
+    <link rel="stylesheet" href="../slick/css/slick-theme.css">
+    <style>
+        #sliderWrap{font-size: 50px;width: 90%; margin: 0 auto;}
+        #sliderWrap div{width: 90%;height: 300px;border: 1px solid #000;}
+    </style>
+    <script src="../slick/js/jquery-3.6.2.min.js"></script>
+    <script src="../slick/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../slick/js/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#sliderWrap').slick({
+                slidesToShow:5,
+                slidesToScroll:1,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                    },
+                    {
+                    breakpoint: 481,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                ]
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="sliderWrap">
+        <div>slick1</div>
+        <div>slick2</div>
+        <div>slick3</div>
+        <div>slick4</div>
+        <div>slick5</div>
+    </div>
+</body>
+</html>

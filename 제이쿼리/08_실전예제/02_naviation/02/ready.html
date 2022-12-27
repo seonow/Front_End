@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>어디서나 펼쳐지는 내비게이션</title>
+<script src="../../../jquery-3.6.2.min.js"></script>
+<script src="../../../jquery-migrate-1.4.1.min.js"></script>
+
+<style>
+
+	*{	margin:0; padding:0;	}
+
+	div#container {
+		width:600px;
+		height:200px;
+		left:0px;
+		top:0px;
+		position:relative;
+	}
+					
+	div#home {
+		width:50px;
+		height:200px;
+		background:#FF9999;
+		left:0px;
+		top:0px;
+		position:absolute;
+		z-index:2;
+	}
+			   
+	ul { 
+		width:600px; 
+		height:200px;
+		list-style:none;
+		left:-600px;
+		top:0px;
+		position:absolute;
+		z-index:1;
+	}
+		 
+	ul li {
+		width:200px;
+		height:200px;
+		float:left;
+		opacity:0.7;
+	}
+
+</style>
+
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="home">HOME </div>
+	  
+		<ul id="menu">     
+			<li><img src="th_bg1.jpg" /></li>
+			<li><img src="th_bg2.jpg" /></li>
+			<li><img src="th_bg3.jpg" /></li>
+		</ul>
+	</div>
+
+	<!---------- jQuery code Start ---------->
+	<script>	
+	
+		// $('#home').toggle(function(){
+		// 	$('#menu:not(:animated)').animate({left:50},1000)
+		// },function(){
+		// 	$('#menu:not(:animated)').animate({left:-600},1000)
+		// })
+		$('#home').toggle(function(){
+			$('#menu').stop().animate({left:50},1000)
+		},function(){
+			$('#menu').stop().animate({left:-600},1000)
+		})
+		
+		$('#menu li').on('mouseenter',function(){
+		$(this).stop().animate({opacity:1},500)
+		})
+		$('#menu li').on('mouseleave',function(){	
+		$(this).stop().animate({opacity:0.7},500)
+		})
+
+		$('#home').on('mousemove',function(e){
+			if(e.pageY <= $('#home').height()/2 ){$('#container').css({top: 0})}
+			else
+			$('#container').css({top: e.clientY - $(this).height()/2})
+		})
+
+		//:not(:animated) - 애니메이션이 다 끝나고 다음 애니메이션을 적용
+		//.stop() - 이전 애니메이션을 무시(중단)하고 다음 애니메이션을 적용
+
+		/* 할 일 목록을 적어보세요 */
+		//1. #home을 클릭시 #menu가 나왔다가 들어가도록 설정
+		//2. #menu li 롤오버(mouseenter,mouesleave)를 사용하여 투명애니메이션
+	    //3. #home에 마우스 진입시 위아래로 따라다니기
+	   
+
+		 
+	</script>
+	
+	
+	
+	
+	
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>toggle()</title>
+<script src="../jquery-3.6.2.min.js"></script>
+<script src="../jquery-migrate-1.4.1.min.js"></script>
+</head>
+<body>
+
+	<button>화면을 변경</button>
+
+	<p><img src="flower.jpg" alt="꽃" /></p>
+	
+	
+	<!---------- jQuery code Start ---------->
+	<script type="text/javascript">
+		
+		// button을 클릭할때마다 바다, 해파리, 건물, 꽃 이미지를 순서대로 로드하시오
+		//toggle은 on대신에 쓴다 .on('toggle')이 아님
+		//toggle은 제이쿼리1.9 이상버전에서 삭제되었다. 그래서 제이쿼리migrat를 적용시켜야함
+		$('button').toggle(
+			function(){
+				$('p img').attr({src:'sea.jpg', alt:'바다'})
+			},
+			function(){
+				$('p img').attr({src:'jellyfish.jpg', alt:'해파리'})
+			},
+			function(){
+				$('p img').attr({src:'building.jpg', alt:'건물'})
+			},
+			function(){
+				$('p img').attr({src:'flower.jpg', alt:'꽃'})
+			}
+		)
+		
+		
+		
+		
+	</script>
+
+
+
+
+
+
+</body>
+</html>

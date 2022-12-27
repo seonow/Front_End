@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> wrapAll( )  </title>
+<!-- jQuery library -->
+<script src="../jquery-3.6.2.min.js"></script>
+</head>
+ 
+<body>
+
+	<strong>제목이 되고 싶어요</strong>
+	<em>제목이 되기 싫어요</em>
+	<strong>제목이 되고 싶어요 </strong>
+
+	<!---------- jQuery code Start ---------->
+	<script>
+
+		// wrapAll()은 선택된 요소 전체를 지정된 html 구조로 감싼다
+		
+		// strong태그 모두를 h1 태그로 감싼다
+		// $('strong').wrap('<h1>'); 각각의 strong에 h1을 씌움 즉 h1이 두개
+		$('strong').wrapAll('<h1>'); //모든 strong을 h1으로 씌움 즉 h1이 한개, em은 포함안함
+		// $('strong, em').wrapAll('<h1>'); //em을 포함하여 h1을 씌움
+		
+	 
+	 </script>
+	 
+	 
+	 
+	 
+
+</body>
+</html>

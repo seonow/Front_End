@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+	* { margin:0; padding:0; }
+	div { margin: 20px; padding: 15px; background: yellow; }
+	p { margin-top:10px; }
+	p.hello { background: red; }
+	
+</style>
+<script src="../../jquery-3.6.2.min.js"></script>
+</head>
+<body>
+ 
+	<div>
+		<p class="hello">Hello World</p>
+	</div>
+
+ 
+	<script>
+		console.log($('.hello').position().top)
+		console.log($('.hello').position())
+		console.log($('.hello').offset().top)
+		console.log($('.hello').offset())
+		
+	
+	</script>
+	
+	
+	
+	
+	
+ 
+</body>
+</html>

@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+*{margin:0; padding:0; box-sizing: border-box;}
+a{text-decoration: none; color: #000;}
+.hidden{position: absolute;
+        width: 1px;height: 1px;
+        margin: -1;overflow:hidden;
+        clip-path: polygon(0 0, 0 0, 0 0);} 
+
+/* 슬라이더 */
+#sliderWrap{overflow: hidden;position: relative;width: 100%;height: 700px;}
+#sliderList{display: flex;width: 100%;}
+#sliderList .slider{width: 100%;min-width: 100%;height: 700px;
+                    background:no-repeat center / cover; 
+                    font-size: 100px;color: #fff;text-shadow: 0 0 5px #000;}
+#sliderList .slider1{background-image: url(../image/slider1.jpg);}
+#sliderList .slider2{background-image: url(../image/slider2.jpg);}
+#sliderList .slider3{background-image: url(../image/slider3.jpg);}
+#sliderList .slider4{background-image: url(../image/slider4.jpg);}
+#sliderList .slider > div{width: 1200px;margin: 0 auto;}
+
+
+#btnPos a{position: absolute; top: 50%;transform: translateY(-50%);
+          width: 100px;height: 100px;
+          background: rgb(121, 6, 6);color: #fff;
+          font-size:70px; 
+          line-height: 100px;text-align: center;
+          border: 1px solid #fff;
+        }
+#btnPos a.prevBtn{left:100px}   
+#btnPos a.prevBtn::after{content:"<";}
+#btnPos a.nextBtn{right:100px}
+#btnPos a.nextBtn::after{content:">";}
+
+/* 번호버튼 */
+#btnNum{position: absolute; bottom: 30px; 
+        width: 100%;
+        display: flex;justify-content: center;}
+#btnNum a{display:block;width: 50px;height: 50px;
+          margin: 0 10px;
+          border-radius: 50%; 
+          background: #fff;
+          font-size: 30px; text-align: center; line-height: 50px;
+          
+        }
+
+#btnNum a::after{content:attr(data-index)}
+
+#btnNum a.on{background: rgb(121,6,6);color: #fff;}

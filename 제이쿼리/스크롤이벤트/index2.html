@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤이벤트</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+        header, main, footer{height: 100vh;font-size: 100px;}
+        main{border-top: 1px solid #000;border-bottom: 1px solid #000;
+            background: black;
+            display: flex; justify-content: space-evenly;overflow: hidden;}
+        section{width: 23%;height: 70%; position: relative;top: 70%; opacity: 0;}
+        section:nth-child(1){background: red;}
+        section:nth-child(2){background: green;}
+        section:nth-child(3){background: blue;}
+        section:nth-child(4){background: pink;}
+    </style>
+    <script src="./js/jquery-3.6.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let state = 1;
+            let posTop = $(window).height() - 500;
+            $(window).on('scroll',function(){
+                if($(this).scrollTop()> posTop && state == 1){
+                    state = 0;
+                    $('section').each(function(){
+                        let timing = $(this).index() * 200;
+                        $(this).delay(timing).animate({opacity:1, top: '30%'},1000)
+                    })
+                }
+                else if($(this).scrollTop() < 500 && state == 0){
+                    state = 1;
+                    $('section').css({opacity:0, top: '70%'})
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <header>haeder</header>
+    <main>
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+        <section>4</section>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>

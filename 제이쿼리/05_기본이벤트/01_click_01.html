@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>click()</title>
+<script src="../jquery-3.6.2.min.js"></script>
+</head>
+<body>
+	
+	<button>화면을 변경</button>	
+	<p><img src="flower.jpg" alt="꽃" /></p>	
+	
+	<!---------- jQuery code Start ---------->
+	<script type="text/javascript">
+	
+		// 버튼을 클릭시 꽃 이미지를 바다 이미지로 변경하시오
+		// $('button').bind('click',function(){
+		// 	$('p img').attr({src:'sea.jpg', alt:'바다'})
+		// })
+		//bind는 이제 없어졌다고 봐도 무방 on으로 대체
+		$('button').on('click',function(){
+			$('p img').attr({src:'sea.jpg', alt:'바다'})
+		})
+		
+		// $('button').click(function(){
+		// 	$('p img').attr({src:'sea.jpg', alt:'바다'})
+		// })
+		
+		// $(document).on('click','button',function(){
+		// 	$('p img').attr({src:'sea.jpg', alt:'바다'})
+		// })
+
+	</script>
+
+
+
+
+
+	
+</body>
+</html>
