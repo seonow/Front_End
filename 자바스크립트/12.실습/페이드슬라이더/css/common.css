@@ -1,0 +1,20 @@
+@charset "utf-8";
+* { box-sizing: border-box; text-align: center;}
+body, h1, ul { margin: 0; padding: 0; }
+ul li { list-style: none; }
+
+/* 슬라이더 */
+#sliderWrap { width: 300px; margin: 0 auto; }
+#sliderList { position: relative; height: 200px; }
+#sliderList li {position: absolute; 
+                width: 300px; height: 200px; min-width: 300px;
+                font-size: 50px; color: #fff; }
+#sliderList .list1 { background: #0c6583; }
+#sliderList .list2 { background: #8abb09; }
+#sliderList .list3 { background: #aa3e84; }
+.on{z-index: 1;}
+/* 슬라이더버튼 */
+#btnWrap { }
+#btnWrap button { }
+#btnWrap .prev { }
+#btnWrap .next { }

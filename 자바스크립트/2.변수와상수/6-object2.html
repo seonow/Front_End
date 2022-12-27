@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>객체선언</title>
+    <script>
+        let tv = Object();
+        tv.color = 'white';
+        tv.price = '1000k';
+        tv.info = function() {
+            document.write(`tv 색상 : ${tv.color} <br>`);
+            document.write(`tv 가격 : ${tv.price} <br>`);
+        };
+        tv.info();
+        console.log(tv)
+
+        let car = {
+                    color: 'black',
+                    price: 300000,
+                    info: function() {
+                        document.write(`car 색상 : ${car.color} <br>`);
+                        document.write(`car 가격 : ${car.price} <br>`);   
+                        }
+        }
+        car.info();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우객체</title>
+    <script>
+        // window.alert('Hello!')
+        // window.prompt();
+        // window.confirm();
+        // window.document.querySelector('header')
+        // 사실상 window가 생략되어있는 것이다
+        document.write(window.innerWidth,'<br>');
+        document.write(window.innerHeight,'<br>');
+        document.write(window.outerWidth,'<br>');
+        document.write(window.outerHeight,'<br>');
+        document.write(window.location, '<br>');
+        document.write(window.scrollX, '<br>');
+        document.write(window.scrollY, '<br>');
+
+        window.addEventListener('scroll',()=>{
+            console.log(window.scrollX)
+            console.log(window.scrollY)
+        })
+        //브라우저창이 얼마나 떨어져 있는지
+        document.write(window.screenTop,'<br>');
+        document.write(window.screenLeft,'<br>'); 
+        
+
+    </script>
+    <style>
+        body{height: 200vh; font-size: 50px;}
+    </style>    
+</head>
+<body>
+    
+</body>
+</html>

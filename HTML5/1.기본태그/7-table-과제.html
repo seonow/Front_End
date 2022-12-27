@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+    table{border-collapse:collapse;}
+    th,td{border:1px solid rgb(255, 0, 0);width:130px;height:30px;}
+    </style>
+    <title>테이블과제</title>
+</head>
+<body>
+    <h1>객실소개</h1>
+    <h2>도미토리</h2>
+    <table>
+        <caption>요안도라 객실</caption>
+        <thead>
+        <tr>
+            <th>방이름</th>
+            <th scope="col" id="a">대상</th>
+            <th scope="col" id="b">크기</th>
+            <th scope="col" id="c">가격</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row" id="1">유채방</th>
+            <td headers="a 1">여성 도미토리</td>
+            <td headers="b 1 2" rowspan="3">4인실</td>
+            <td headers="c 1 2 3" rowspan="4">1인 20,000원</td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="2" id="2">동백방</th>
+            <td headers="a 2">동성도미토리</td>
+        </tr>
+        <tr>
+            <td headers="a 2">가족1팀</td>
+        </tr>
+        <tr>
+            <th scope="row" id="3">천혜향방</th>
+            <td headers="a 3">-</td>
+            <td headers="b 3">2인실</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="4">바깥채 전체를 렌트합니다</td>
+        </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

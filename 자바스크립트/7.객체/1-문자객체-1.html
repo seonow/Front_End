@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string 객체</title>
+    <script>
+        //내장객체로는 date, string, math, number...등이 있다
+        let string = 'Hello, thank you good luck to you';
+        document.write(string.length,'<br>');
+        document.write(string.charAt(15), '<br>');
+        document.write(string.indexOf('you'), '<br>');
+        document.write(string.indexOf('you', 20), '<br>');//20은 찾기 시작하는 위치
+        document.write(string.indexOf('your'), '<br>');//없으면 -값이 출력된다
+        document.write(string.lastIndexOf('you'),'<br>');
+        document.write(string.lastIndexOf('you', 20),'<br>');
+
+        document.write(string.includes('you'),'<br>'); //true
+        document.write(string.includes('like'),'<br>');//없으면 false
+
+        //search는 정규식 사용가능
+        document.write(string.search('you'),'<br>'); //13
+        document.write(string.search('your'),'<br>');//-값 출력
+
+        document.write(string.match('you'),'<br>'); //you
+        document.write(string.match('your'),'<br>');//null
+
+        document.write(string.substr(7, 5),'<br>'); //7에서 5개
+        document.write(string.substring(7,13),'<br>');//7에서 0부터 시작해서 13위치까지 겹치는 부분
+        
+        //정규식으로 사용가능
+        // document.write(string.replace('you', 'me'),'<br>');//하나만 바꿈
+        // document.write(string.replaceAll('you', 'me'),'<br>');//모두 바꿈
+        document.write(string.replace(/you/g, 'me'),'<br>');//모두 바꿈 기호를 사용하는 것을 정규식이라고 함
+
+        document.write(string.toLowerCase(),'<br>');
+        document.write(string.toUpperCase(),'<br>');
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

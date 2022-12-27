@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <style>
+        body, ul{margin: 0; padding: 0;}
+        li{list-style: none;}
+        /* 슬라이더 */
+        section{overflow: hidden;}
+        ul{width: 400%; display: flex; transition: 1s; }
+        ul li{width: 100%;height: 500px; font-size: 100px; color: #fff;}
+        ul li.s1{background: rgb(255, 0, 0);}
+        ul li.s2{background: rgb(0, 255, 166);}
+        ul li.s3{background: rgb(3, 45, 255);}
+        ul li.s4{background: rgb(255, 7, 209);}
+    </style>
+</head>
+<body>
+    <section>
+        <ul>
+            <li class="s1">1</li>
+            <li class="s2">2</li>
+            <li class="s3">3</li>
+            <li class="s4">4</li>
+        </ul>
+    </section>
+    <script>
+        const sliderWrap = document.querySelector('ul');
+        // sliderWrap.style.marginLeft = '-100%'; 
+        // sliderWrap.style.transform = `translateX(-25%)`;
+        let num = 0;
+        let slider = () => {
+            num += 100;
+            sliderWrap.style.marginLeft = `-${num}%`;
+            if(num == 300) num = -100;
+        }
+        setInterval(slider, 2000)
+    </script>
+</body>
+</html>

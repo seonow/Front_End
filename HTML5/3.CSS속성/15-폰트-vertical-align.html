@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>vertical align</title>
+    <style>
+        table{border-collapse: collapse;}
+        th, td{border: 1px solid #000; width: 200px; height: 100px;}
+        th{text-align: left;
+            vertical-align:bottom;
+        }
+        img{vertical-align: bottom;}
+        /* baseline은 대문자의 아랫부분을 기준으로 맞추고 bottom은 가장 아래(예:g, y 등)에 맞춰 정렬 */
+    </style>
+</head>
+<body>
+    <img src="./images/scene1.jpg" alt="석양">
+    <span>123ABCg텍스트</span>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>테이블제목셀</th>
+            <td>테이블셀</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS선택자로 요소에 접근</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li class="active">CSS</li>
+        <li class="active">JavaScript</li>
+    </ul>
+    <script>
+        const ulTag = document.querySelector('ul');
+        console.log(ulTag)
+        
+        // const lis = document.querySelector('li'); //첫번재 요소만 값을 반환
+        const lis = document.querySelectorAll('li');
+        console.log(lis);
+        // lis[0].style.color = "#f00";
+
+        lis.forEach((li)=>{
+            li.style.color = "#f00";
+        })
+
+        const act = document.querySelectorAll('.active');
+        console.log(act)
+        act[0].style.color = "#00f";
+    </script>
+</body>
+</html>

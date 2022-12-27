@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 반복문</title>
+    <script>
+        //반복문은 특정코드를 반복해서 처리해야 하는 경우에 사용
+        //for문, while문, do while문
+        // document.write("1")
+        // document.write("2")
+        // document.write("3")
+        // document.write("4")
+        // document.write("5")
+        /* for (초기화; 반복조건; 반복구문) {
+            반복명령문; 
+        }
+        */
+        // for (i=0; i<5; i++) {
+        //     document.write(i+1)
+        // }
+        // for(i=5;i>0;i--){
+        //     document.write(i);
+        // }
+        // 구구단 출력
+        for(i=1; i<10; i++){
+            document.write(`2X${i}=${2*i}<br>`);
+        }
+        // for(i=1; i<10; i++){
+        //     document.write(`3X${i}=${3*i}<br>`);
+        // }
+       
+        // for(i=2;i<10;i++){
+        //     document.write(`---------${i}단입니다-----------<br>`)
+        //     for(j=1;j<10;j++){
+        //         document.write(`${i}X${j}=${i*j}<br>`);
+        //     }
+        // }
+
+
+        //2,4,6,8,10 짝수출력
+        // for(i=10;i>0;i-=2){
+        //     document.write(i+'<br>')
+        // }
+        //홀수출력
+        // for(i=1; i<=10; i++){
+        //     if(i%2 == 1)
+        //     document.write(`${i}<br>`);
+        // }
+
+        //별찍기(줄수만큼 별을 찍고 줄바꿈, 이중for문)
+        for(i=0; i<5; i++){
+            for(j=0; j<i+1;j++){
+                document.write('*');
+            }
+            document.write('<br>')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

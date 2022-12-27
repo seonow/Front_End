@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>scroll이벤트</title>
+        <style>
+            body{height: 300vh; background: green;}
+        </style>
+
+    </head>
+    <body>
+        <script>
+            window.addEventListener('scroll',()=>{
+                // document.body.style.background = "gray"
+                if(window.scrollY>=900){
+                    document.body.style.background = "blue"
+                }
+                else{
+                    document.body.style.background = "transparent"
+                }
+                console.log(window.scrollY)
+            })
+        </script>
+    </body>
+</html>

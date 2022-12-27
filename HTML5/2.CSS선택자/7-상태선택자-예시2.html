@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상태선택자 활용</title>
+    <style>
+        div {border: 1px solid black; width: 600; height: 80px; overflow: hidden; transition: 0.5s;}
+        #check1:checked ~ #content1{height: 300px;}
+        #check2:checked ~ #content2{height: 300px;}
+    </style>
+</head>
+<body>
+    <input type="radio" name="check" id="check1" checked="checked">
+    <input type="radio" name="check" id="check2">
+    <div id="content1">
+        <h1>한글</h1>
+        <p>가나다라마바사아자차카타파하 가갸거겨고교구규그기 아야아어여오요우유으이</p>
+    </div>
+    <div id="content2">
+        <h1>영어</h1>
+        <p>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+    </div>
+</body>
+</html>

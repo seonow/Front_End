@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가시속성들</title>
+    <style>
+        h1{
+            /* display: none; */
+            /* visibility: hidden; */
+            /* visibility: hidden - 영역이 그대로 유지된채 보이지 않음 */
+            opacity : 0;
+            transition: 0.5s;
+            background: rgba(255,0,0,0.5);
+            color: rgba(0, 0, 0, 0);
+        }
+        h1:hover {opacity: 1; color: rgba(0, 0, 0, 1);}
+        /* h1 span{opacity: 0; transition: 0.5s; background: yellow;}
+        h1 span:hover{opacity: 1;} */
+    </style>
+</head>
+<body>
+    <a href="#">링크1</a>
+    <h1><span>제목입니다</span></h1>
+    <a href="#">링크2</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>number 데이터타입</title>
+    <script>
+        let a = 100;
+        let b = 3.14;
+        let c = 1e-3;
+        console.log(a, typeof(a));
+        console.log(b, typeof(b));
+        console.log(c, typeof(c));
+        console.log(typeof(1), typeof('1'));
+
+        let num1 = 10;
+        let num2 = 20;
+        let num3 = num1 + num2;
+        console.log(num3);
+
+        let height1 = (prompt('키를 입력하시오(숫자만 입력)'));
+        console.log(height1, typeof(height1));
+        // prompt에 입력한 값은 string으로 인식이 된다
+        let height2 = (prompt('몸무게를 입력하세요(숫자만 입력'));
+        console.log(height2, typeof(height2));
+        //Number를 통해 string을 숫자로 변환한다. 이때 Number는 무조건 대문자로 적어야한다.
+        
+        //prompt에서 숫자값을 입력받았을 때 처리
+        // document.write(`키와 몸무게의 합은 ${Number(height1) + Number(height2)}입니다`)
+        // document.write(`키와 몸무게의 차이는 ${height1 - height2}입니다`);
+
+        document.write(`키와 몸무게의 합은 ${parseInt(height1)+parseInt(height2)}입니다`)
+        //parseInt : 숫자로 시작하는 숫자와 문자의 결합된 값에서 숫자만을 추출한다, 정수의 형태 ex) 200.7cm -> 200
+        document.write(`키와 몸무게의 합은 ${parseFloat(height1)+parseFloat(height2)}입니다`)
+        //parseFloat : 숫자로 시작하는 숫자와 문자의 결합된 값에서 숫자만을 추출한다, 실수의 형태 ex) 200.7cm -> 200.7
+
+        let str = '3.141592는 Pi의 근삿값입니다';
+        console.log(Number(str)); //NaN(Not a Number)
+        console.log(parseInt(str));//3
+        console.log(parseFloat(str));//3.141592
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

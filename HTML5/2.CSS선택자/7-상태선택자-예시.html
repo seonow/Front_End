@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태선택자 활용</title>
+    <style>
+        div {border: 1px solid black; width: 600; height: 300px; overflow: hidden; transition: 0.5s;}
+        input[type="checkbox"]:checked+div{height: 0px;}
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <div>
+        <h1>한글</h1>
+        <p>가나다라마바사아자차카타파하 아야아어여오요우유으이 가갸거겨고교구규그기</p>
+    </div>
+    
+</body>
+</html>

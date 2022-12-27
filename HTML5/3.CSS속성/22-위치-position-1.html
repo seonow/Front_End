@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>위치속성-상대위치</title>
+    <style>
+        div{width: 100px;height: 100px;color: #fff;font-size: 24px;}
+        div:nth-child(1){background: rgb(255, 0, 0);
+                        position: relative;
+                        top: 100px;
+                        left: 100px;
+                        z-index: 1;
+        }
+        div:nth-child(2){background: rgb(0,255, 0);
+                        position: relative;
+                        top: 50px;
+                        left: 50px;
+        }
+        div:nth-child(3){background: rgb(0, 0, 255);
+                        position: relative;
+                        bottom:200px;
+        }
+        /* relative : 원래 있던 요소의 위치값에서 이동시킴 */
+    </style>
+</head>
+<body>
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+</body>
+</html>

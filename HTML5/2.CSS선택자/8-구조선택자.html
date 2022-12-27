@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>구조선택자(일반,형태)</title>
+        <style>
+            /* 자식요소들이 여러태그들로 구성될 때 */
+            div > h1:first-child {color: red;}
+            div > p:nth-child(2) {color: red;}
+            div > p:last-child {color: red;}
+            div > p:nth-last-child(2) {color: red;}
+            /* nth-last-child(n):뒤에서 n번째 자식요소 */
+            /* 같은 요소들 중에서 몇번째 태그 */
+            div > p:nth-of-type(2) {background: yellow;}
+
+            ul li:nth-child(odd){background: green;}
+            /* ul li:nth-child(2n+1){background: green;} */
+            ul li:nth-child(even){background: orange;}
+            /* ul li:nth-child(2n){background: orange;} */
+
+            div > :only-child{background: purple;}
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>세종대왕</p>
+        </div>
+        <div>   
+            <h1>한글</h1>
+            <p>가나다라마바사아자차카타파하</p>
+            <p>가나다라마바사아자차카타파하</p>
+            <p>가나다라마바사아자차카타파하</p>
+            <p>가나다라마바사아자차카타파하</p>
+            <h2>예시</h2>
+            <p>가나다라마바사아자차카타파하</p>
+        </div>
+        <!-- 구조선택자는 ul,li의 형태에서 많이 쓰임 -->
+        <ul>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+        </ul>
+        <ul>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+        </ul>
+    </body>
+</html>

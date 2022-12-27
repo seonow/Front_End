@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>단위</title>
+        <style>
+            /* 경로단위 */
+            body{background: url(./images/background.png) ;}
+            /* 크기단위
+            절대단위:pixel(px),point(pt)
+            상대단위:em(배수),%,rem,vw,vh */
+            div{background:#66ff00;}
+            section{background: rgb(190, 4, 4);
+                    /* width: 300px; 
+                    width: 225pt;
+                    width: 100%; %는 부모의 크기의 몇 퍼센트*/ 
+                    width: 100vw;
+                    height: 100vh;}
+            /* 색상단위 */
+            h1{background: #00f7ff;}
+            /* hex code 6자리는 색상 2R/2G/2B  , 가끔 8ㅈ자리도 있는데 마지막 2자리는 투명도를 나타냄*/
+            h2{background: rgb(255,0,0);}
+            h3{background: rgba(255,0,0,0.5);}
+            /* RGB는 0~255사이 값, 투명도 0~1사이 값 */
+            h4{background: hsl(194deg,100%,90%);}
+            /* deg:각도에서의 도 */
+            h5{background: hsla(194deg,100%,90%,0.5);}
+            /* hsl(색상환,채도,명도,투명도) */
+        </style>
+    </head>
+    <body>
+        <section>영역지정</section>
+        <div>
+            <h1>header1</h1>
+            <h2>header2</h2>
+            <h3>header3</h3>
+            <h4>header4</h4>
+            <h5>header5</h5>
+            <h6>header6</h6>
+        </div>
+    </body>
+</html>

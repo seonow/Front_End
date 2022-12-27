@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수</title>
+    <script>
+        /* 함수란?
+        어떤 입력을 받아 특정한 기능이나 계산을 수행 후 값을 되돌려주는 코드
+        단, 입력이나 결과없이 특정기능만 수행도 가능
+        함수를 실행하는 걸 보통 호출한다라고 표현 */
+        //선언적함수
+
+        test2();//첫번째 실행
+
+        function test1() {
+            console.log('함수를 실행합니다1');
+            return;//함수를 빠져나옴
+            console.log('함수를 실행합니다2');
+        }
+        test1();//2번재 실행
+
+        function test2() {
+            test1();
+            console.log('함수를 실행합니다3');
+        }
+        test2();//세번째 실행
+
+        //함수는 호출한 시점에 실행됨
+
+        //익명함수, 무명함수
+        //함수선언 뒤에 호출해야함
+        var test3 = function() {
+            console.log('함수가 실행됩니다4');
+        }
+        test3();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

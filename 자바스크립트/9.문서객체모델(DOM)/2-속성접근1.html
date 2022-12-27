@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성제어</title>
+    <style>
+        /* div a{color: red;} 7*/
+        /* #target a{color:orange;} 4*/
+        /* .active a{color:yellow} 6*/
+        /* div#target a{color: green;} 3*/
+        /* div.active a{color: blue;} 5*/
+        /* #target.active a{color: pink;} 2*/
+        /* div#target.active a{color:brown} 1*/
+        #target{background: green;}
+        .active a{color: #fff;}
+
+        #target2{background: rgb(138, 4, 248);}
+        .active2 a{color: #fff;}
+    </style>
+</head>
+<body>
+    <div id="target" class="active">
+        <a id="site" href="#">네이버</a>
+    </div>
+    <script>
+        const divTag = document.getElementById('target');
+        console.log(divTag);
+        // let idName = divTag.getAttribute('id'); //divTag의 속성을 가지는 것이므로 getAttribute이며 가질 속성을 ()에 작성
+        let idName = divTag.id;
+        console.log(idName);
+
+        // let className = divTag.getAttribute('class');//divTag의 속성을 가지는 것이므로 getAttribute이며 가질 속성을 ()에 작성
+        let className = divTag.className;//백엔드 쪽의 class와 구분하기 위하여 className이라고 써야한다
+        console.log(className);
+
+        console.log(divTag.children[0].getAttribute('href')) //href의 값만이 출력된다
+        console.log(divTag.children[0].href) //전체경로 값이 출력되고
+
+        if(idName == "target"){
+            divTag.style.border = "5px solid #f00"
+        }
+
+        //속성값 변경
+        // divTag.setAttribute('id', 'target2');
+        divTag.id = 'target2'
+
+        // divTag.setAttribute('class', 'active2');
+        divTag.className = 'active2'
+
+        //a의 이동경로를 네이버로 변경하시오
+        //내가한거
+        // const aTag = document.getElementById('site');
+        // aTag.setAttribute('href', 'http://www.naver.com' )
+
+        //쌤이한거
+        const anchor =divTag.children[0];
+        // anchor.setAttribute('href','http://www.naver.com')
+        // anchor.setAttribute('target','_blank')
+        anchor.href = 'http://www.naver.com';
+        anchor.target = '_blank'
+    </script>
+
+</body>
+</html>

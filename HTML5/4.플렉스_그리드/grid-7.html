@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>그리드</title>
+    <style>
+        #wrap{ display: grid;
+                background: #000000;
+                padding: 10px;
+                grid-template-areas: 'header header header header header header'
+                                        'nav main main main side side'
+                                        'nav footer footer footer footer footer' ;
+                gap:10px;
+            }
+        .item{
+            padding: 20px;
+            border: 1px solid #000;
+            background: rgb(39, 194, 255);
+            font-size: 30px;
+            text-align: center;
+            text-transform: capitalize;
+
+        }
+
+        .header{grid-area: header;
+        }
+        .nav{grid-area: nav;
+        }
+        .main{grid-area: main;
+        }
+        .side{grid-area: side;
+        }
+        .footer{grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="item header">header</div>
+        <div class="item nav">menu</div>
+        <div class="item main">main</div>
+        <div class="item side">right</div>
+        <div class="item footer">footer</div>
+    </div>
+</body>
+</html>

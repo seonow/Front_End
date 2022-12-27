@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>리스트 스타일</title>
+    <style>
+        body, ul, ol{margin: 0; padding: 0;}
+        ul{background: rgb(139, 255, 116);}
+        ol{background: rgb(253, 204, 68);}
+        ul li{  background: rgb(102, 112, 255) url(./images/bullet.png) no-repeat 5px;
+                list-style: none;
+                /* padding-left: 50px; */
+                text-indent: 20px;
+                /* font-size: 30px; */
+                /* list-style-type: square;
+                list-style-position: outside;
+                list-style-image: url(./images/bullet.png) ; */
+                /* 기능적 제한이 많아서 최근에는 잘 쓰이지 않는다 */
+        }
+        ol li{
+                list-style-type:upper-roman;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>한글</li>
+        <li>영어</li>
+        <li>일어</li>
+        <li>중문</li>
+    </ul>    
+    <ol>
+        <li>한글</li>
+        <li>영어</li>
+        <li>일어</li>
+        <li>중문</li>
+    </ol>
+</body>
+</html>

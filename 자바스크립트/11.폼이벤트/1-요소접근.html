@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼이벤트 요소접근</title>
+
+</head>
+<body>
+    <form name="people">
+        <legend>개인정보</legend>
+        <input type="text" id="idName" name="userName">
+    </form>
+    <form name="company">
+        <legend>회사정보</legend>
+        <input type="text" name="comName"><br>
+        <input type="text" name="part" value="영업">
+        <input type="text" name="part" value="회계">
+        <input type="text" name="part" value="인사">
+    </form>
+    <script>
+        // const idName = document.getElementById('idName');
+        const idName = document.people.userName;
+        console.log(idName)
+        idName.style.background="yellow";
+
+        const partName = document.company.part;
+        console.log(partName);
+        // partName[1].style.background = "red";
+        // partName.forEach((p) => {
+        //     p.style.background = 'red';            
+        // });
+        for(p of partName){
+            p.style.background = 'red';    
+        }
+    </script>
+</body>
+</html>

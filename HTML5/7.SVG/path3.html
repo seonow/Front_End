@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>path</title>
+    <style>
+        svg{width: 1000px;height: 300px;border: 1px solid #000;}
+        path{fill:transparent;
+            stroke-width: 2;
+            stroke-dasharray: 1500;
+            stroke-dashoffset: 1500;
+            stroke: #000;}
+        svg:hover path{stroke-dashoffset: 0; transition: 2s;}
+    </style>
+</head>
+<body>
+    <svg>
+        <path d="M0 150 Q125 300 250 150 T500 150 T750 150 T1000 150"/>
+        <path d="M0 150 q125 -150 250 0 T500 150 T750 150 T1000 150"/>
+        <path d="M0 150 1000 150">
+        <!-- 패스를 여러개 넣으려면 꼭 /로 닫아줘야함 -->
+    </svg>
+</body>
+</html>

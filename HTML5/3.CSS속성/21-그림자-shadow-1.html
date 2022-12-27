@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>그림자 속성</title>
+    <style>
+        div{width: 500px;height: 200px;
+            margin: 50px 0 0 50px;
+            border: 1px solid black;
+            /* box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5); */
+            transition: 0.5s
+            /* inset: 영역 안쪽으로 그림자효과 */
+            /* 가로 세로 블러 색상 */
+            /* 마이너스값을 통해 그림자를 왼쪽 위쪽에 줄 수 있다 */
+        }
+        div:hover{box-shadow: inset 0px 0px 30px rgba(0,0,0,0.5);}
+        div h1{color : white;
+            text-shadow: 2px 2px rgb(20, 231, 231),
+                        -2px -2px rgb(221, 40, 212),
+                        3px 3px #000,
+                        -3px -3px #000;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>가나다라마바사아자차카타파하</h1>
+    </div>
+</body>
+</html>

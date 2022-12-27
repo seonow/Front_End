@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        let food = ['짜장면','짬뽕','탕수육','볶음밥','꿔바로우','마라탕','어향장육','토마토계란볶음']
+        // document.write(`1등 ${food[0]}<br>`)
+        // document.write(`2등 ${food[1]}<br>`)
+        // document.write(`3등 ${food[2]}<br>`)
+        // document.write(`4등 ${food[3]}<br>`)
+        for(i=0;i<food.length;i++){
+            console.log(`${i+1}등 ${food[i]}`)
+        }
+    </script>
+    <style>
+        div{width: 100px;height: 100px;
+            border: 1px solid #000;}
+    </style>
+</head>
+<body>
+    <button>색상변경</button><br><br>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        const btn = document.querySelector('button');
+        const div = document.querySelectorAll('div');
+
+        btn.addEventListener('click', () => {
+            for(let i=0;i<div.length;i++){
+                div[i].style.backgroundColor = "#000";
+            }
+        })
+        for(let i=0;i<div.length;i++){
+            div[i].addEventListener('click', () => {
+                // for(let j=0;j<div.length;j++){
+                div[i].style.backgroundColor = "#ff0";
+                // event.currentTarget.style.backgroundColor = "#ff0";
+                // }
+            })
+        }
+
+    </script>
+</body>
+</html>

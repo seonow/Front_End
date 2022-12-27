@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>리스트 버튼</title>
+    <style>
+        /* 초기화 */
+        *{box-sizing: border-box;}
+        body, ul{margin: 0; padding: 0;}
+        li{list-style: none;}
+        /* 리스트 */
+        ul{ width: 800px; margin: 50px auto 0;}
+        ul li{width: 200px;
+            float: left ;    
+        }
+        ul li a{
+            display: block;
+            background: rgb(255, 252, 82);
+            border: 1px solid #000;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 70px;
+            color: #000;
+            /* line-height때문에 a태그의 height값이 없어져도 된다 */
+        }
+        a:hover{background-color: #000;
+                color: #fff;
+        }
+        .a > a{border-right:0;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="a"><a href="#">menu1</a></li>
+        <li class="a"><a href="#">menu2</a></li>
+        <li class="a"><a href="#">menu3</a></li>
+        <li class="b"><a href="#">menu4</a></li>
+    </ul>
+</body>
+</html>

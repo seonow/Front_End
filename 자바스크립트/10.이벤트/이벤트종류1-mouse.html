@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스이벤트</title>
+    <style>
+        div{width: 200px;height: 200px;border: 1px solid #000;float: left;}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const divTag = document.querySelectorAll('div');
+            console.log(divTag);
+            divTag[0].addEventListener('click',(e)=>{
+                e.currentTarget.style.background = 'blue';
+            })
+            divTag[1].addEventListener('dblclick',(e)=>{
+                e.currentTarget.style.background='green';
+            })
+            divTag[2].addEventListener('mousedown',(e)=>{
+                e.currentTarget.style.background='brown';
+            })
+            divTag[2].addEventListener('mouseup',(e)=>{
+                e.currentTarget.style.background='transparent';
+            })
+            divTag[3].addEventListener('mouseover',(e)=>{
+                e.currentTarget.style.background='red';
+            })
+            divTag[3].addEventListener('mouseout',(e)=>{
+                e.currentTarget.style.background='transparent';
+            })
+            divTag[4].addEventListener('mouseenter',(e)=>{
+                e.currentTarget.style.background='yellow';
+            })
+            divTag[4].addEventListener('mouseleave',(e)=>{
+                e.currentTarget.style.background='transparent';
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>클릭</div>
+    <div>더블클릭</div>
+    <div>클릭2</div>
+    <div>마우스진입1</div>
+    <div>마우스벗어나기1</div>    
+    <div>마우스진입2</div>
+    <div>마우스벗어나기2</div>
+
+</body>
+</html>

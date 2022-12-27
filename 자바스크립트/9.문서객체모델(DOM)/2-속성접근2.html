@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성접근</title>
+</head>
+<body>
+    <h1 id="title">마우스 아웃</h1>
+    <img src="./btn_out.gif" alt="버튼">
+    <p class="path">경로출력</p>
+    <script>
+        const idTag = document.getElementById('title');
+        const imgTag = document.querySelector('img');
+        const pTag = document.querySelector('p');
+        
+        //mouseEnter
+        imgTag.addEventListener('mouseenter',()=>{
+            idTag.innerText = "마우스인";
+            imgTag.setAttribute('src','./btn_over.gif')
+            pTag.innerText = imgTag.getAttribute('src') //src값만 나옴
+        })
+        //mousLeave
+        imgTag.addEventListener('mouseleave',()=>{
+            idTag.innerText = "마우스아웃";
+            imgTag.setAttribute('src','./btn_out.gif')
+            pTag.innerText = imgTag.src; //전체 경로가 나옴
+        })
+    </script>
+</body>
+</html>

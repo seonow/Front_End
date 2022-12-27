@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string객체</title>
+    <script>
+        //영어소문자로 이름을 입력받아서 대문자로 출력하시오
+        // let name = prompt('이름을 입력하시오','소문자만 입력가능')
+        // document.write(name.toUpperCase());
+
+        //휴대폰 번호를 입력받아서 출력
+        //마지막 4자리는 **** 처리
+        // let phoneNumber = prompt('연락처를 입력하시오','숫자만 입력가능');
+        // let result = phoneNumber.substring(0,phoneNumber.length-4)+'****';
+        // let result2 = phoneNumber.replace(/-/g,'');
+        // document.write(result+'<br>');
+        // document.write(result2);
+
+        const text = '안녕하세요 제 번호는 010-1111-2222 입니다';
+        const telNum = text.match(/\d{3}-\d{4}-\d{4}/)//\d{n}:n개의 숫자를 의미
+        document.write(telNum.join());//telNum은 배열이라서 string으로 바꾸어주기 위해 join을 사용
+        console.log(telNum, typeof(telNum))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

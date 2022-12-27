@@ -1,0 +1,41 @@
+<doctype html></doctype>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table{border-collapse: collapse;}
+        th, td{border:1px solid black; width:150px; height:40px;}
+    </style>
+    <title>표제목</title>
+</head>
+<body>
+    <table>
+        <caption>표제목</caption>
+        <thead>
+            <!-- 표의 머리에는 td대신 th만 올 수 있음-->
+            <tr>
+                <th>Header1</th>
+                <th>Header2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 표의 몸통 -->
+            <tr>
+                <td>Data1</td>
+                <td>Data1</td>
+            </tr>
+            <tr>
+                <td>Data2</td>
+                <td>Data2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- 표의  말미부분, 없을 수도 있음-->
+            <tr>
+                <td>Total1</td>
+                <td>Total2</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

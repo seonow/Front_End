@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>공튀기는 애니메이션</title>
+    <style>
+      body { position: relative; margin-top: 50px; }
+      #ball { position: absolute;
+              top: 0; left: calc(50% - 100px);
+              width: 200px; height: 200px;
+              border: 1px solid #000;
+              border-radius: 50%;
+              background: #fff;
+              animation-name: baseball;
+              animation-duration: 0.5s;
+              animation-direction: alternate;
+              animation-iteration-count: infinite;
+              animation-timing-function: ease;
+            }
+
+      @keyframes baseball {
+              from { top: 340px; }
+              to { top: 0;}
+            }
+
+    </style>
+  </head>
+  <body>
+    <div id="ball"></div>
+  </body>
+</html>

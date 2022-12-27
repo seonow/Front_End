@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>매개변수 활용</title>
+    <style>
+        h1{border: 3px solid #000;}
+    </style>
+</head>
+<body>
+    <button>크기변경1</button>
+    <button>크기변경2</button>
+    <h1>제목박스의 크기를 변경하시오</h1>
+    <script>
+        const heading = document.querySelector('h1');
+        const btn = document.querySelectorAll('button');
+        console.log(heading);
+        console.log(btn);
+
+        function change(hw, hh){
+            heading.style.width = `${hw}px`;
+            heading.style.height = `${hh}px`;
+        }
+        btn[0].addEventListener('click', () => {
+            change(500,200)
+        })
+        btn[1].addEventListener('click', () => {
+            change(800,300)
+        })
+    </script>
+</body>
+</html>

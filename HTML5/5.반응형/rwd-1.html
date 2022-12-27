@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형</title>
+    <style>
+        /*미디어쿼리 */
+        /* 1000px 이하 */
+        /* @media all and (max-width: 1200px ) and (min-width: 600px) {
+            body{background: rgb(3, 118, 160);}
+        } */
+/* ------------------------------------------------------------------------------ */
+        body, h1{ margin: 0;}
+        div{text-align: center;}
+        h1{color: rgb(31, 107, 74);}
+        p{font-size: 1.5em;}
+        img{}
+
+        /* 1201px 이상 */
+        @media screen and (min-width: 1201px) {
+            div{width: 1201px; margin: 0 auto;}
+            img{width: 1201px;}
+        }
+        /* 1200px 이하 */
+        @media screen and (max-width:1200px) {
+            div{width: 100%;}
+            img{width: 100%;}
+        }
+        /* 600px 이하 */
+        @media screen and (max-width:600px) {
+            body{background: rgb(0, 64, 5);}
+            div{ color: #fff;}
+            h1{color: #f0f;}
+            img{width: 90%;}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>반응형 웹 디자인</h1>
+        <p>반응형 웹디자인은 다양한 디바이스와 다양한 크기의 화면에서 일관되게 잘 작동하는 웹페이지를 제작하는 일입니다</p>
+        <img src="./img/bg.1secret-3120483_1280.jpg" alt="숲">
+    </div>
+</body>
+</html>

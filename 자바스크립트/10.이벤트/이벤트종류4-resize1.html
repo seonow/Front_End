@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resize 이벤트</title>
+</head>
+<body>
+    <h1>카운팅0</h1>
+    <script>
+        const hTag = document.querySelector('h1');
+        let n = 0;
+        let changecolor = ()=>{
+            hTag.innerText = window.innerWidth
+            if(window.innerWidth>1000)
+                document.body.style.background = 'brown'
+            else
+                document.body.style.background = 'green'
+        }
+        changecolor();
+        window.addEventListener('resize',()=>{
+            // hTag.innerText = ++n;
+            changecolor();
+        }) 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+@charset "utf-8";
+body, div, ul, h1{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;color: #000;}
+
+#gallery{position:relative;width: 400px;
+        margin: 50px auto 0;padding: 20px 50px ;
+        border: 1px solid #000; text-align: center;}
+#photo{width: 400px;margin-top: 20px;}
+
+#photoWrap{width: 300px; margin: 20px auto 0; overflow: hidden;}
+#photoList{display: flex; width: 800px;transition: 0.5s margin linear;}
+#photoList li{width: 100px;}
+
+#btnWrap{}
+#btnWrap a{position: absolute; bottom: 23px;font-size: 50px;}
+#btnWrap .prev{left: 50px;}
+#btnWrap .next{right: 50px;}

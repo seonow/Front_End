@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형</title>
+    <style>
+        *{box-sizing: border-box;}
+        body, h1, h2, ul, p, footer{margin: 0; padding: 0;}
+        ul, li{list-style: none;}
+        a{text-decoration: none; color: #000;}
+
+        header{height: 100px; display: flex; justify-content: space-between; align-items: center;border: 1px solid #000;}
+        header h1{margin-left: 30px;}
+        header a{color: #000;}
+
+        .hidden{overflow: hidden;width: 1px;height: 1px;margin: -1px; clip-path: polygon(0 0, 0 0, 0 0);}
+
+        .viewGnb{position: absolute ; top: 25px;left: 50px;width: 50px;height: 50px;border: 1px solid #000;
+               display: none;}
+        .viewGnb::before{content: ""; position:absolute; top: 15px; left: 10px;
+                        width: 30px;border-bottom: 1px solid #000;
+                        transition: 0.5s;}
+        .viewGnb::after{content: ""; position:absolute; top: 30px; left: 10px;
+                        width: 30px;border-bottom: 1px solid #000;
+                        transition: 0.5s;}
+        .viewGnb:hover::before{transform:  translateY(7.5px) rotate(45deg);}
+        .viewGnb:hover::after{transform:  translateY(-7.5px) rotate(-45deg);}
+
+        nav ul{display: flex;}
+        nav ul li{margin: 0 20px;}
+        nav ul li a{font-size: 20px;}
+
+        div ul{display: flex;}
+        div ul li{margin: 0 20px}
+        div ul li a{font-size: 20px}
+
+        #mainbg{position: relative;width: 100%;;height: 50vw;
+                background: url(./img/architecture-gd9d5bb50f_1920.jpg) no-repeat center / cover}
+        #mainbg:before{content: "";position: absolute; top: 0; left: 0;
+                        width: 100%; height: 100%; 
+                        background: #000; opacity: 0.5;}
+        #mainbg p{position: relative;;font-size: 5vw; color: rgb(255, 255, 255); margin-left: 18%; padding-top: 100px;}
+        #mainbg #text2{position: relative;;font-size: 1vw; padding-top: 50PX;}
+
+        #content{display: flex; justify-content: center;}
+        section{background: rgb(191, 184, 184); width: 18vw;height: 18vw;margin: 30px 0;}
+        #sc1, #sc2, #sc3{margin-right: 30px;}
+
+        
+        footer{height: 150px;background: rgb(158, 238, 174);}
+
+        @media screen and (max-width:1220px){
+        #mainbg p{font-size: 5vw; color: #fff;margin-left: 0;padding-top: 100px;}
+        #content{display: flex; justify-content: space-between;}
+        section{background: rgb(191, 184, 184); width: 22vw;height: 22vw;margin: 30px 0;}
+        #sc1, #sc2, #sc3{margin-right: 30px;}
+        }
+        @media screen and (max-width:1000px){
+
+        div ul li a{font-size: 16px}
+
+        .viewGnb{display: block; left: 50%; transform: translateX(-50%);} 
+        .viewGnb:active + #gnb{top: 100px; height: 100px;}
+
+        #gnb{position: fixed; top:100px;width: 100vw; height: 0; background: rgb(131, 43, 253);transition: 0.5s;overflow: hidden; z-index: 999;}
+        #gnb ul{display: flex; justify-content: center;}
+        #gnb ul li{text-align: center;line-height: 100px;}
+        #gnb ul li a{color: #fff;}        
+
+        #mainbg{height: 100vh;}
+        #mainbg p{font-size: 5rem;}
+        #mainbg #text2{font-size: 3rem;}
+
+        div ul{display: block;}
+        
+        #content{flex-wrap: wrap;}
+        section{width: 45vw; height: 45vw;}
+        #sc1, #sc2, #sc3{margin-right: 0;}
+        }
+    
+        @media screen and (max-width:800px){
+        #mainbg p{font-size: 3rem;}
+        #mainbg #text2{font-size: 1.5rem;}
+
+        section{width: 100vw; height: 45vw; margin: 0;}
+        #sc1, #sc2, #sc3, #sc4{margin-top: 15px;}
+        #sc4{margin-bottom: 30px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#">로고</a></h1>
+        <a href="#" class="viewGnb"><span class="hidden">Gnb보기</span></a>
+        <nav id="gnb">
+            <ul>
+                <li><a href="#">리스트1</a></li>
+                <li><a href="#">리스트2</a></li>
+                <li><a href="#">리스트3</a></li>
+            </ul>
+        </nav>
+        <div id="lnb">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+    <div id="mainbg">
+        <p>고객의<br> 행복을 위하여</p>
+        <p id="text2">주거, 쇼핑, 레저의 다양한 건축으로 <br> 풍요로운 삶의 행복을 전달 합니다.</p>
+    </div>
+    <div id="content">
+        <section id="sc1">
+            <h2>컨텐츠1</h2>
+        </section>
+        <section id="sc2">
+            <h2>컨텐츠2</h2>
+        </section>
+        <section id="sc3">
+            <h2>컨텐츠3</h2>
+        </section>
+        <section id="sc4">
+            <h2>컨텐츠4</h2>
+        </section>
+    </div>
+    </main>
+    <footer>푸터</footer>
+</body>
+</html>

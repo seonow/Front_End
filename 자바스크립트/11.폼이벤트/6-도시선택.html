@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도시선택</title>
+</head>
+<body>
+    <form name="myCity">
+        <label><input type="radio" name="city" value="서울">서울</label>
+        <label><input type="radio" name="city" value="부산">부산</label>
+        <label><input type="radio" name="city" value="대구">대구</label>
+        <input type="button" name="btn" value="선택한 도시는?">
+    </form>
+    <p>선택한 도시는 00입니다</p>
+    <script>
+        //선택없이 클릭하면 '도시를 선택하시오'라는 메세지창 출력
+        //선택 수 클리하면 p태그에 `선택한 도시는 ${}입니다`;
+
+        const btn = document.myCity.btn;
+        const city = document.myCity.city
+        const myCity = document.querySelector('p');
+
+        btn.addEventListener('click',()=>{
+            if(city.value == "" ){
+                alert('도시를 선택하시오')
+            }
+            else
+            {myCity.innerText = `선택한 도시는 ${city.value}입니다`}
+        })
+
+    </script>
+</body>
+</html>

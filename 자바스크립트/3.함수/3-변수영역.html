@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>전역변수, 지역변수, 블락레벨스코프</title>
+    <script>
+        //var
+        //전역변수, 지역변수
+        var count = 100;//전역변수
+        function area(){
+            // var count = 200;
+            count = 200; //전역변수
+            var count = 300;
+            //count = 200 전역변수 다음에 var count = 300 지역변수를 지정하면 같은 count이므로 앞에 있는 전역변수가 상쇄되어 밖에 있는 var count = 100의 전역변수만 남게 된다.
+        }//지역변수
+        area();
+        console.log(count);
+
+
+        //let
+        let count1 = 500;
+        console.log(count1)
+        count1 = 5000;
+        console.log(count1);
+        {
+            let count1 = 3000;
+            console.log(count1);
+        }
+        console.log(count1);
+
+        //const
+        const count2 = 10;
+        console.log(count2);
+        {
+           const count2 = 20;
+           console.log(count2);
+        }
+        console.log(count2);
+
+        if(5 > 4){
+            var num = 12345;
+            // let num = 12345;
+            // const num = 12345;
+        }
+        console.log(num);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

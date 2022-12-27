@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>다양한 함수표현식</title>
+    <script>
+        //선언적함수, 명명적함수
+        function fnc1(name){
+            console.log(name)
+        };
+        fnc1('홍길동');
+
+        //익명함수, 무명함수, 리터럴함수
+        var fnc2 = function(name){
+            console.log(name)
+        };
+        fnc2('이순신');
+
+        //즉시실행함수
+        (function(name){
+            console.log(name)
+        })('김구')
+
+        //화살표함수
+        let fnc3 = (name) => {
+            console.log(name)
+        }
+        fnc3('세종대왕')
+    </script>
+    <style>
+        div{width: 200px;height: 200px;
+            background: rgb(0, 255, 238);}
+    </style>
+</head>
+<body>
+    <div><a href="#">aaaa</a></div>
+    <script>
+        const div = document.querySelector('div');
+        console.log(div)
+        // div.addEventListener('click', function(){
+        //     this.style.background = 'yellow';
+        //     console.log(this);
+        // })
+        div.addEventListener('click', (e)=>{
+            // event.currentTarget.style.background = 'green'
+            e.currentTarget.style.background = 'green';
+            console.log(this);
+            console.log(e.currentTarget);
+            console.log(e.target);
+                })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{margin: 0;}
+        #parent{width: 700px;height: 700px;
+                background: #000;
+                margin: 0 auto;
+                position: relative;
+        }
+        #child{width: 100px;height: 100px;
+                background: #ff0;
+                position: absolute;
+                right: 0; bottom: 0;
+        }
+        /* absolute는 자기를 감싸고 있는 부모가 position값을 가지고 있다면 그 부모를 기준으로 위치를 이동 */
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wheel이벤트</title>
+    <style>
+        body{height: 300vh;display: flex;justify-content: center;align-items: center;}
+        div{width: 300px;height: 300px;background: gray;opacity: 0;}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const divTag = document.querySelector('div');
+            let n = 0;
+            window.addEventListener('wheel',(e)=>{
+                //휠을 아래로 하면 0보다 작다, 휠을 위로 올리면 0보다 크다
+                // console.log(e.wheelDelta) //아래로 휠 = -120, 위로 휠 = 120
+                if(e.wheelDelta < 0){
+                    // console.log('아래방향입니다')
+                    // document.body.style.background='green';
+                    n += 0.05;
+                    if(n>1) n =1;
+                    divTag.style.opacity = n;
+                    console.log(n)
+                }
+                else{
+                    // console.log('윗방향입니다')
+                    // document.body.style.background='blue';
+                    n -= 0.05;
+                    if(n<0) n = 0;
+                    divTag.style.opacity = n;
+                    console.log(n)
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

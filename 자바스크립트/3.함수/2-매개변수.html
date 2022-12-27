@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>매개변수</title>
+    <script>
+        function sum(){
+            var a = 10;
+            var b = 20;
+            var c = a + b;
+            return c;
+        }
+        console.log(sum());
+
+        //매개변수(parameter)
+        function sum2(a, b){
+            var c = a + b;
+            return c;
+        }
+        console.log(sum2(100, 200));
+        //전달인자(argument)
+
+        function info(name, area){
+            document.write(`안녕하세요 ${name}입니다<br>`);
+            document.write(`사는곳은 ${area}입니다<br>`);
+            document.write('---------------------------<br>');
+        }
+        info('홍길동', '경기도');
+        info('이순신','남해');
+        info('김구','서울');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>상태선택자</title>
+        <style>
+            input:enabled{background: yellow; color: red;}
+            input:disabled{background: gray;}
+            input:focus{background: blue; color: white;}
+            /* input[disabled]{background: gray;} */
+        </style>
+    </head>
+    <body>
+        <h1>Enabled</h1>
+        <input type="text">
+        <h1>disabled</h1>
+        <input type="text" disabled>
+    </body>
+</html>

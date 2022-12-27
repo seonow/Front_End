@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* 초기화 */
+* { box-sizing: border-box; }
+body, h1, ul { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+/* 헤더 */
+#header { overflow: hidden; position: absolute; z-index: 999; 
+        width: 100%; height: 80px;
+        display: flex; justify-content: center;
+        transition: 0.5s; }
+#header.on { height: 380px; background: #fff; }
+#header.on::before { content: ""; position: absolute; top: 80px; left: 0; 
+                width: 100%; height: 300px; background: rgb(232, 232, 232); }
+#header h1 { position: absolute; top: 20px; left: 20px; color: #fff;  }
+#header.on h1 { color: #000; }
+/* 네비 */
+#gnbList { display: flex; padding-top: 35px; }
+#gnbList > li { text-align: center; }
+#gnbList > li > a { display: block; width: 170px; height: 45px; 
+                    font-size: 18px;
+                    color: #fff; }
+#header.on #gnbList > li > a { color: #000; }
+/* snb */
+.snb { position: relative; padding-top: 20px; }
+.snb li { line-height: 50px; }
+.snb li a { color: #000; }
+/* gnb_hover */
+#gnbList > li:hover > a { border-bottom: 3px solid #f00; }
+.snb li:hover a { color: #f00; }
+/* 비디오 */
+#videoWrap { overflow: hidden; position: relative; width: 100%; height: 100vh; 
+            display: flex; justify-content: center; align-items: center;}
+#videoWrap video { position: absolute; 
+                top: 0; 
+                left: 50%;
+                /* margin-left: -960px; */
+                transform: translateX(-50%);
+                min-width: 1920px;
+                min-height: 100%;  
+            }
+#videoWrap h2 { position: relative; 
+                font-size: 7vw; text-transform: uppercase; 
+                color: #fff; opacity: 0; transition: 3s opacity; }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foreach예시</title>
+    <style>
+        div{width: 100px;height: 100px;
+            border: 1px solid #000;}
+    </style>
+</head>
+<body>
+    <button>red</button>
+    <button>blue</button>
+    <button>green</button><br><br>
+    <div></div>
+    <script>
+        const btn = document.querySelectorAll('button');
+        const div = document.querySelector('div');
+        console.log(btn)
+        // for(let i=0;i<btn.length;i++){
+        //     btn[i].addEventListener('click', ()=>{
+        //          div.style.background = btn[i].innerText;
+        //     })
+        // }
+
+        //for in (element와 node 구분)(객체요소에 적용하는 for문으로 일반문에서 오류출력)
+        // for(let i in btn){
+        //     btn[i].addEventListener('click', ()=>{  
+        //          div.style.background = btn[i].innerText;
+        //     })
+        // }
+        let obj = {name: '이순신', age : '40'};
+        for(let i in obj){
+           console.log(obj[i]) 
+        }
+
+        //for of
+        // for(let bt of btn){
+        //     bt.addEventListener('click', ()=>{
+        //         div.style.background = bt.innerText;
+        //     })
+        // }
+
+        //foreach
+        btn.forEach((btns, i)=>{
+            btns.addEventListener('click',()=>{
+                div.style.background = btns.innerText;
+            })
+        })
+
+
+        // btn[0].addEventListener('click', ()=>{
+        //     div.style.background = btn[0].innerText;
+        // })
+        // btn[1].addEventListener('click', ()=>{
+        //     div.style.background = btn[1].innerText;
+        // })
+        // btn[2].addEventListener('click', ()=>{
+        //     div.style.background = btn[2].innerText;
+        // })
+    </script>
+</body>
+</html>

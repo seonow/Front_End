@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본문법예</title>
+</head>
+<body>
+    <button>제목변경</button>
+    <h1>제목을 변경하시오</h1>
+    <script>
+        const btn = document.querySelector('button');
+        const heading = document.querySelector('h1');
+        btn.addEventListener('click', function(){
+            let hText = prompt('제목내용을 입력하시오', '');
+            heading.innerText = hText;
+            heading.style.color = '#f00';
+            // heading.innerText = "코리아아이티";
+        })  
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스이벤트</title>
+    <style>
+        div{width: 200px;height: 200px;border: 1px solid #000;float: left;}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const divTag = document.querySelectorAll('div');
+            console.log(divTag);
+
+            for(let i=0;i<divTag.length;i++){
+                divTag[i].addEventListener('click',(e)=>{
+                    for(let j=0;j<divTag.length;j++){
+                        divTag[j].style.background = "transparent"
+                    }
+                    e.currentTarget.style.background = "red";
+                })
+            }
+        })
+    </script>
+</head>
+<body>
+    <div>이벤트</div>
+    <div>이벤트</div>
+    <div>이벤트</div>
+    <div>이벤트</div>
+</body>
+</html>

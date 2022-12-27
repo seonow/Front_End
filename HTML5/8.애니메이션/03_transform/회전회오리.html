@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="prefixfree.min.js"></script>
+    <style>
+        body { width: 200px; margin: 100px auto; }
+
+        /* section { position: relative; width: 200px; height: 200px; 
+                transform-style: preserve-3d;
+                transform: rotateZ(30deg) rotateY(-30deg) ;
+        } */
+        section { position: relative; width: 200px; height: 200px;
+                  transform-style: preserve-3d;
+                  animation-name: ani;
+                  animation-duration: 1s;
+                  animation-iteration-count: infinite;
+                  animation-timing-function: linear;
+                  backface-visibility: visible;
+                }       
+        
+        div { position: absolute; left: 0; top: 0; opacity: 0.5; 
+              width: 200px; height: 200px; }
+
+        @keyframes ani {
+            from { transform: rotateX(30deg) rotateY(0deg);  }
+            to { transform: rotateX(30deg) rotateY(360deg);  }
+        }
+
+        div:nth-child(1) { background: red; transform: rotateY(45deg);}
+        div:nth-child(2) { background: green; transform: rotateY(90deg);}
+        div:nth-child(3) { background: blue; transform: rotateY(135deg);}
+        div:nth-child(4) { background: yellow; }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>빨강</div>
+        <div>그린</div>
+        <div>파랑</div>
+        <div>노랑</div>
+
+    </section>
+</body>
+</html>

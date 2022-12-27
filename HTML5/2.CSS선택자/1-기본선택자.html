@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>기본선택자</title>
+        <!-- css안에서의 주석처리는 다르다 -->
+        <style>
+            /* 최상위선택자 */
+            :root{ --h-size: 50px}
+            /* 전체선택자 : *{border: 2px solid red;} */
+            /* 태그선택자 : */
+            h1 {color: red; font-size: var(--h-size);} 
+            /* 아이디선택자: #p1{background: red;} */
+            /* 대소문자구분, 특수문자 '_','-'만 허용, 반드시 영문으로 시작 */
+            /* 클래스선택자: .s1{color: red;} */
+            p.s2{font-size: 20px;}
+            /* s2가 p와 li에 걸려 있는데 p에는 폰트크기를 li에는 색상을 하고 싶을 때 앞에 태그를 걸고 클래스를 불러옴 */
+            .s1{color: red;}
+            .s2{color: blue;}
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>CSS선택자</h1>
+        <p id="p1" class="s2">스타일시트를 적용하는 대상을 선택자(selector)라고 합니다</p>
+        <!-- id가 있어도 class를 적용시킬 수 있다 -->
+        <!-- id와 class 중에서는 id가 우선순위이다 -->
+        <!-- p#p1 / p.s1/ p#p1.s1 다음 셋 중 우선순위는 p#p1.s1 - p#p1 - p.s1 순서이다 -->
+        <h2>선택자 종류</h2>
+        <p class="s2">다양한 선택자에 대해서 알아봅시다</p>
+        <ul>
+            <li>전체선택자</li>
+            <li>태그선택자</li>
+            <li class="s1 s2">아이디선택자</li>
+            <li class="s1">클래스선택자</li>
+            <!-- id는 중복적용 안되지만 class는 중복적용이 된다, class 다중지정이 된다 -->
+        </ul>
+    </body>
+</html>

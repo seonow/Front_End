@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성제거 / 속성여부확인</title>
+    <style>
+        #target{width: 300px;height: 300px;border: 1px solid #000;}
+        .active{background: #a5f06e;}
+    </style>
+</head>
+<body>
+    <div id="target" class="active">스타일을 제거하시오</div>
+    <script>
+        // const target = document.getElementById('target');
+        // target.addEventListener('click',function(){
+        //     this.removeAttribute('class');
+        // })
+        const target = document.getElementById('target');
+        target.addEventListener('click',(e)=>{
+            if(target.hasAttribute('class')){
+                //hasAttribute : 값의 일치로 true/false를 판별
+                //hasAttributes : 있다 없다로만 true/false를 판별
+                // event.currentTarget.removeAttribute('class');
+                e.currentTarget.removeAttribute('class');
+            }
+            else{
+                // e.currentTarget.setAttribute('class','active');
+                e.currentTarget.className = 'active';
+            }
+        })
+    </script>
+</body>
+</html>

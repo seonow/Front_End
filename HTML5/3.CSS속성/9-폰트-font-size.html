@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폰트크기속성, font-size</title>
+    <style>
+        body{font-size: 12px;}
+        h1{font-size: 36px;}
+        p{font-size: 36px;}
+        p.s2{font-size: 3em}
+        .s3{font-size: 300%;}
+        .s4{font-size: 3rem;}
+        /* html(root)를 기준으로 3배수 즉 16*3이 되어버림 */
+        
+        /* 100분의 1단위 */
+        .s5{font-size: 10vw;}
+        .s6{font-size: 10vh;}
+        /* div{font-size: 2em;} */
+        div{width: 50vw; height: 50vw;
+            background: rgb(156, 8, 214);
+            /* 정사각형으로 크기가 변화됨 */
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        A
+        <div>
+            B
+        </div> -->
+    </div>
+    <h1>안녕하세요</h1>
+    <p class="s1">안녕하세요</p>
+    <p class="s2">안녕하세요</p>
+    <p class="s3">안녕하세요</p>
+    <p class="s4">안녕하세요</p>
+    <p class="s5">안녕하세요</p>
+    <p class="s6">안녕하세요</p>
+    <div>박스</div>
+</body>
+</html>

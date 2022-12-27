@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>여백속성, margin</title>
+    <style>
+        body{
+            /* margin-top: 20px;
+            margin-right: 50px;
+            margin-bottom: 30px;
+            margin-left: 50px;
+            top을 기준으로 시계방향*/
+            /* margin: 20px 50px 30px 50px; */
+            /* top,bottom값이 같고 right,left값이 같으면 뒤에오는 bottom,left값은 생략해도 적용된다 */
+            /* margin: 50px 30px; */
+            /* right랑 left가 같을 경우 right만 적어도 left에 적용된다 다만 위아래만 같을 경우에는 생략 불가 */
+            /* margin: 50px 30px 100px; */
+            /* 값이 모두 같을 경우 */
+            margin: 50px;}
+            /* margin값이 중첩될 경우 중복된 값중에 하나만 적용(큰게 적용됨) */
+        #box1 {background: #ff008c; width: 200px; height: 200px;
+               margin-bottom: 50px;}
+        #box2 {background: #15ff00; width: 200px; height: 200px;margin-top: 50px;}
+    </style>
+</head>
+<body>
+    <div id="box1">박스요소1</div>
+    <div id="box2">박스요소2</div>   
+</body>
+</html>

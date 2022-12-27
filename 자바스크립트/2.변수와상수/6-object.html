@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+    <script>
+        /* 객체란 복잡한 자료를 표현할 때 쓰는 자료형입니다.
+        데이터 타입은 object
+        일반적으로 하나의값으로 표현되는 자료형과 달리
+        속성(key)과 값을 쌍으로 가지는 집합 */
+        
+        //let people = new Object();
+        //let people = Object();
+        // let people = {};
+        // people.name = '홍길동';
+        // people.age = 20;
+        // people.job = '의적';
+        let people = {name : '홍길동', age : 20, job : '의적'};
+        people.area = '대구';
+        people['name'] = '서현재'
+        console.log(people,typeof(people));
+        console.log(people.length);
+        console.log(Object.keys(people));
+        console.log(Object.keys(people).length);
+        console.log(Object.values(people));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

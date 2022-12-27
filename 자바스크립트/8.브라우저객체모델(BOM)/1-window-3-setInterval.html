@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <h1>0</h1>
+    <button>멈춤</button>
+    <button>재생</button>
+    <script>
+        // let i = 0;
+        // setTimeout(()=>{
+        //     console.log(++i);
+        // },2000)
+        // setInterval(()=>{
+        //     console.log(++i);
+        // },2000)
+        const heading = document.querySelector('h1');
+        const btn = document.querySelectorAll('button');
+
+        let n = 0;
+        // setTimeout(function(){
+        //     heading.innerHTML = ++n;
+        // },2000)        
+        let timer = setInterval(function(){
+            heading.innerHTML = ++n;
+        },1000)
+        //clearInterval : setInterval을 중지시킴, 변수만 입력가능해서 setInterval을 변수로 지정해줌
+        btn[0].addEventListener('click',()=>{
+            clearInterval(timer)
+        })
+        btn[1].addEventListener('click',()=>{
+            timer = setInterval(function(){
+                heading.innerHTML = ++n
+            },1000)
+        })
+    </script>
+</body>
+</html>

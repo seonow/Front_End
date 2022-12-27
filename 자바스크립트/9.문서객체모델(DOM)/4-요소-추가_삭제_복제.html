@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 추가/삭제/복제</title>
+</head>
+<body>
+    <div>
+        <h2>큰제목이 필요합니다</h2>
+        <p>가나다라마바사</p>
+    </div>
+    <a href="#">링크</a>
+    <script>
+        const divTag = document.querySelector('div');
+        const h2Tag = document.querySelector('h2');
+        const pTag = document.querySelector('p');
+
+        //요소 추가
+        const h1 = document.createElement('h1');
+        h1.innerText = '추가된 큰제목입니다';
+        console.log(h1);
+        // divTag.prepend(h1); //divTag의 제일 첫번째 자식요소로 추가
+        divTag.append(h1); //divTag의 제일 마지막 자요식요소로 추가, 두개를 동시에 적용시 이동의 개념으로 첫번째 자식요소에서 마지막 자식요소로 이동
+
+        // divTag.prependChild(h1); 없는 명령어
+        // div.appendChild(h1); //하나의 노드만 추가가능, 텍스트 오류
+
+        //요소 이동
+        const anchor = document.querySelector('a');
+        document.body.insertBefore(anchor, divTag);
+
+        //요소 삭제
+        // h2Tag.remove();
+        divTag.removeChild(pTag)
+
+        //요소 복제
+        // const anchor2 = anchor.cloneNode(); element값만 복제
+        const anchor2 = anchor.cloneNode(true); //완전 똑같이 복제
+        console.log(anchor);
+        console.log(anchor2);
+        divTag.append(anchor2);
+    </script>
+</body>
+</html>

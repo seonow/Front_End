@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배열을 활용한 예시</title>
+</head>
+<body>
+    <button>색상1</button>
+    <button>색상2</button>
+    <button>색상3</button>
+    <h1>배경과 제목색상을 조합하시오</h1>
+    <script>
+        const btn = document.querySelectorAll('button')
+        let bgColor = ['red', 'blue', 'green'];
+        let bgColor2 = ['white', 'yellow', 'pink'];
+        
+        console.log(btn);
+        console.log(btn[0]);
+        console.log(btn[1]);
+        console.log(btn[2]);
+
+        btn[0].addEventListener('click', ()=>{
+            document.body.style.backgroundColor = bgColor[0];
+            document.body.style.color = bgColor2[0];
+        })
+        btn[1].addEventListener('click', ()=>{
+            document.body.style.backgroundColor = bgColor[1];
+            document.body.style.color = bgColor2[1];
+        })
+        btn[2].addEventListener('click', ()=>{
+            document.body.style.backgroundColor = bgColor[2];
+            document.body.style.color = bgColor2[2];
+        })
+    </script>
+</body>
+</html>

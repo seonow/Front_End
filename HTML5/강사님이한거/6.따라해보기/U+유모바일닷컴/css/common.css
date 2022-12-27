@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* 초기화 */
+* { box-sizing: border-box; }
+body, h1, h2, ul { margin: 0; padding: 0; }
+ul li { list-style: none; }
+a { text-decoration: none; color: #000; }
+.hidden { position: absolute; width: 1px; height: 1px;
+          margin: -1px; overflow: hidden;
+          clip-path: polygon(0 0, 0 0, 0 0); }
+/* 웹폰트 적용 - 고딕체로 */
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+body { font-family: 'S-CoreDream-3Light'; }
+/* 문서넓이 1280px 기준 */
+/* 헤더 */
+#headerWrap { position: absolute; top: 0; left: 0; width: 100%; }
+#headerWrap:hover { background: #fff; }
+#header { width: 1280px; margin: 0 auto; padding: 20px 0;
+          display: flex; justify-content: space-between; }
+#header .logo { width: 174px;  }
+#header .logo a { display: block; height: 56px; text-indent: -110%; overflow: hidden;
+                  background: url(../images/header-logo-white.png) no-repeat; }
+#headerWrap:hover .logo a { background-image: url(../images/header-logo.png); }
+/* gnb */
+#gnb { padding-top: 15px; }
+#gnbList { display: flex; }
+#gnbList > li { margin: 0 20px; }
+#gnbList > li > a { color: #fff; }
+#headerWrap:hover #gnbList > li > a { color: #000; }
+/* lnb */
+#lnb { order: 1; padding-top: 15px; }
+#lnb a { color: #fff; margin: 0 15px; }
+#headerWrap:hover #lnb a { color: #000; }
+/* 섹션 */
+#sliderWrap { height: 100vh; background: #4887c1 url(../images/bgSlider.jpg) no-repeat center top / cover; }
+#sliderWrap > div { width: 1280px;  margin: 0 auto; padding-top: 300px;
+                    font-size: 100px; font-weight: 900; color: #fff;  }

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>전후문자선택자</title>
+        <style>
+            h1::before{content: "*"; font-size: 30px; color: red;}
+            h1::first-letter{background: yellow;}
+            p::after{content: "- end"; color: blue;}
+        </style>
+    </head>
+    <body>
+        <h1>영어</h1>
+        <p>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMONPQRSTUVWXYZ</p>
+    </body>
+</html>

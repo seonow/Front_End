@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스따라다니기</title>
+    <style>
+        img{position: absolute;}
+    </style>
+</head>
+<body>
+    <img src="./fireworks (1).png" alt="불꽃">
+    <script>
+        const fire = document.querySelector('img')
+        console.log(fire)
+
+        document.addEventListener('mousemove',(e)=>{
+            fire.style.left = `${e.clientX}px`;
+            fire.style.top = `${e.clientY}px`;
+        })
+    </script>
+</body>
+</html>

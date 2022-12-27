@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* 초기화 */
+*{box-sizing: border-box;}
+body, h1, h2, h3, p, ul { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+/* 122 이상 */
+#header{display: flex; justify-content: center; align-items: center;
+        width: 100%;height: 100px;}
+#header h1{position: absolute; top: 30px; left: 100px;}
+#header a{color: #000;}
+
+
+#member{position: absolute; top: 40px; right: 40px;}
+#member ul{display: flex;}
+#member ul li{margin-left: 20px;}
+#member ul li a{color: #000;}
+
+
+#gnbView{display: none;}
+
+
+#gnb ul{display: flex;}
+#gnb ul li{margin: 0 20px;}
+#gnb ul li a{color:#000}
+
+/* 슬로건 */
+#sloganWrap{position: relative;;width: 100%; height: 40vw;
+            background: url(../신세계건설/img/architecture-gd9d5bb50f_1920.jpg) no-repeat center / cover;}
+#sloganWrap::before{content: "";position: absolute; top: 0; left: 0;
+                    width: 100%; height: 100%; 
+                    background: #000; opacity: 0.5;}
+#slogan{position: relative;;width: 1200px; margin: 0 auto; color: rgb(255, 255, 255);}
+#slogan h2{padding: 4vw 0;font-size: 7vw;}
+#slogan p{font-size: 2vw;}
+
+/* content */
+#content{width: 1200px;margin: 30px auto; 
+        display: flex;justify-content: space-between;}
+#content > section{width: 24.5%; height: 300px; 
+                background: rgb(133, 133, 133);}
+
+/* footer */
+#footer{height: 150px; background: rgb(168, 238, 211);}
+
+@media screen and (max-width:1220px) {
+    #slogan{width: 100%;}
+    #content{width: 100%;}
+ }
+
+@media screen and (max-width:1000px) {
+    #gnbView{display: block;}
+    #gnb{position: fixed; right: -200px; top: 0; z-index: 999;
+        width: 200px; height: 100vh;
+        background: #000;}
+    #gnb ul{display: block;}
+    #gnb ul li{line-height: 100px;}
+    #gnb ul li a{color: #fff;}
+
+    #sloganWrap {height: 100vh;padding-left: 50px;}
+    #slogan h2{padding: 100px 0 50px;font-size: 5rem;}
+    #slogan p{font-size: 2rem;}
+    #content{flex-wrap: wrap;}
+    #content > section{width: 49%;margin-bottom: 20px;}
+
+ }
+
+@media screen and (max-width:800px) { 
+    #slogan h2{font-size: 3rem;}
+    #slogan p{font-size: 1.5rem;}
+    #content > section{width: 100%;}
+}

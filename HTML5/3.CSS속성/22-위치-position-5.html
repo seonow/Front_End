@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>스크롤 위치에 따른 고정</title>
+    <style>
+        body{height: 3000px; margin:0;}
+        #box1, #box3{height: 500px;
+                    background: yellow;
+        }
+        #box2{width: 300px;height: 300px;
+            background-color: red;
+            margin: 100px 0;
+            position: sticky;
+            top: 100px;
+        }
+        /* sticky는 스크롤 내리다가 주어진 값이 된 순간부터 고정이된다
+        위의 경우에는 top 100px이 되면 스크롤을 내리다가 고정이 된다 */
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>

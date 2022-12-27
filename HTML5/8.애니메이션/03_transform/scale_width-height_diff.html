@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>scale과 width-heigth의 차이</title>
+    <style>
+        div{width: 300px;height: 189.38px;border: 5px solid #f00;
+            transition: 1s; overflow: hidden;}
+        div img{transition: 1s; width: 300px;}
+        /* div:hover img{width: 450px;} */
+        /* div:hover img{transform:scale(1.5);} */
+
+        /* div:hover{width: 450px;} */
+        div:hover{transform: scale(1.5);}
+        /* div를 width로 늘리면 div의 border값만 늘어나는데 scale을 적용하면 늘어나는 border값에 맞게 안에 있는 이미지도 같이 늘어남 */
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./cat-2528119_640.jpg" alt="냥이">
+    </div>
+</body>
+</html>
