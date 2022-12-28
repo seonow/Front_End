@@ -57,7 +57,7 @@ $('#btnNum a').on('click',function(){
     $(this).addClass('on')
 
     $('.slider' + btnNum).addClass('active')
-                 .css({opacity:0})
+                 .css({opacity:0 })
                  .animate({opacity:1},1000,function(){
                     $('#sliderList li').not(this).removeClass('active')
                     for(let i = 0; i<liLength-1; i++){

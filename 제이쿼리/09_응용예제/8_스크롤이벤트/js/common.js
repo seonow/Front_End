@@ -1,5 +1,5 @@
 let pos = $(window).height();
-// let pos = $('#content1').position().top;
+// let pos = $('#content1').position().top; 
 console.log(pos)
 //#gnb li, #header a, .top 클릭시 해당위치로 슬라이딩
 
